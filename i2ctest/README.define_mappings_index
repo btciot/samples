@@ -1,0 +1,26 @@
+PUT https://search-rpi1-iot-data-zxyfiheqzeuqrbgx5lnk7joh6y.us-west-2.es.amazonaws.com/iot_rpi1_data4 HTTP/1.1
+User-Agent: Fiddler
+Host: search-rpi1-iot-data-zxyfiheqzeuqrbgx5lnk7joh6y.us-west-2.es.amazonaws.com
+Content-Length: 361
+
+{
+  "mappings": {
+    "iot_rpi1_data4_map": {
+      "properties": {
+        "timestamp": {
+          "type": "long",
+          "copy_to": "datetime"
+        },
+        "datetime": {
+          "type": "date",
+          "store": true
+        },
+        "temperature": {
+          "type": "float",
+	  "store":true
+        }
+      }
+    }
+  }
+}
+
